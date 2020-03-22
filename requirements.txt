@@ -1,0 +1,5 @@
+aiohttp>=3.4.0
+baostock==0.8.8
+aiohttp-jwtplus>=0.1.0
+aiohttp-jinja2>=1.2.0
+aiohttp-basicauth>=0.2.0
