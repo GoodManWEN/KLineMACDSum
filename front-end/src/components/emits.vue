@@ -68,6 +68,7 @@ export default {
       result:"",
       show:0,
       errmsg:"",
+      isLoading:false,
     }
   },
   props:{
@@ -100,6 +101,8 @@ export default {
     clicked(){
       // console.log(JSON)
       // JSON.stringify({})
+      this.isLoading = true
+      this.$emit('emitclicked',this.isLoading)
       this.axios({
         url:'/macdapi',
         method:"post",
@@ -113,6 +116,8 @@ export default {
         }
       }).then(res => {
         this.isActive = true
+        this.isLoading = false
+        this.$emit('loadingchanged',this.isLoading)
         if (res.data.success == 1) {
           this.ttype = 'is-success'
           this.result = "Success"

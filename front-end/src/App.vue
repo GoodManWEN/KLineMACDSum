@@ -32,6 +32,8 @@
     </div>
     <div class='div1-ttls' style="margin-left:0;margin-right:0">
       <emits
+      @emitclicked="emitclicked"
+      @loadingchanged="loadingchanged"
       :stocknum="stocknum"
       :radio="cradio"
       :sttime="sttime"
@@ -40,7 +42,8 @@
       :eddate="eddate"
       />
     </div>
-    
+  <loading :isLoading="isLoading"
+  />
   </div>
 </template>
 
@@ -49,6 +52,7 @@ import radios from './components/radios'
 import timel from './components/timel'
 import dates from './components/dates'
 import emits from './components/emits'
+import loading from './components/loading'
 
 export default {
   name: 'App',
@@ -56,7 +60,8 @@ export default {
     radios,
     timel,
     dates,
-    emits
+    emits,
+    loading
   },
   data(){
     return {
@@ -68,7 +73,8 @@ export default {
       sttime:"09:30",
       edtime:"15:00",
       stdate:"2020-01-01",
-      eddate:"2020-01-01"
+      eddate:"2020-01-01",
+      isLoading:false,
     }
   },
   methods:{
@@ -98,6 +104,12 @@ export default {
         this.inputtype = "is-danger"
         this.inputmsg = "必须输入6位股票代码"
       }
+    },
+    emitclicked(data){
+      this.isLoading=data
+    },
+    loadingchanged(data) {
+      this.isLoading=data
     },
   }
 }
