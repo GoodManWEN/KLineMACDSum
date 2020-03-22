@@ -8,13 +8,15 @@ def get_install_requires(filename):
 
 setup(
     name="KLineMACDSum", 
-    version='0.0.2',
+    version='0.0.3',
     author="WEN",
     description='Statistic of MACD sum of a specified period.',
     long_description='https://github.com/GoodManWEN/KLineMACDSum',
     long_description_content_type="text/markdown",
     url="https://github.com/GoodManWEN/KLineMACDSum",
-    packages = find_packages(),
+    # Not actually required ,according to 
+    # https://stackoverflow.com/questions/3596979/manifest-in-ignored-on-python-setup-py-install-no-data-files-installed/
+    # packages = find_packages(),
     install_requires = get_install_requires('requirements.txt'),
     classifiers=[
         'Programming Language :: Python :: 3',
