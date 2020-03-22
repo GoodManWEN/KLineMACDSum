@@ -8,7 +8,7 @@ def get_install_requires(filename):
 
 setup(
     name="KLineMACDSum", 
-    version='0.0.3',
+    version='0.0.4',
     author="WEN",
     description='Statistic of MACD sum of a specified period.',
     long_description='https://github.com/GoodManWEN/KLineMACDSum',
