@@ -16,7 +16,7 @@ setup(
     url="https://github.com/GoodManWEN/KLineMACDSum",
     # Not actually required ,according to 
     # https://stackoverflow.com/questions/3596979/manifest-in-ignored-on-python-setup-py-install-no-data-files-installed/
-    # packages = find_packages(),
+    packages = find_packages(),
     install_requires = get_install_requires('requirements.txt'),
     classifiers=[
         'Programming Language :: Python :: 3',
