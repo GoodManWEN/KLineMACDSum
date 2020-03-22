@@ -8,7 +8,7 @@ def get_install_requires(filename):
 
 setup(
     name="KLineMACDSum", 
-    version='0.0.1',
+    version='0.0.2',
     author="WEN",
     description='Statistic of MACD sum of a specified period.',
     long_description='https://github.com/GoodManWEN/KLineMACDSum',
@@ -26,5 +26,6 @@ setup(
         'Framework :: AsyncIO',
     ],
     python_requires='>=3.7',
-    keywords=["aiohttp" , "stock", "MACD"]
+    keywords=["aiohttp" , "stock", "MACD"],
+    include_package_data=True,
 )                                                         
