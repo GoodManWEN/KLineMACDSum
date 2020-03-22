@@ -12,4 +12,4 @@ python3 -m KLineMACDSum
 ```
 
 ## 
-![](https://github.com/GoodManWEN/KLineMACDSum/blob/master/screenshots/macd.vip.jpg =1034x1016)
+![](https://github.com/GoodManWEN/KLineMACDSum/blob/master/screenshots/macd.vip.jpg)
