@@ -23,6 +23,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: POSIX :: Linux',
         'Operating System :: Microsoft :: Windows',
+        'Framework :: AsyncIO',
     ],
     python_requires='>=3.7',
     keywords=["aiohttp" , "stock", "MACD"]
