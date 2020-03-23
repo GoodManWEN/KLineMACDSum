@@ -140,6 +140,8 @@ export default {
     stocknum(val){
       if (val.length == 6 && !isNaN(val)) {
         this.btndsb = false
+      } else {
+        this.btndsb = true
       }
     }
   }
