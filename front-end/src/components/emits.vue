@@ -19,7 +19,7 @@
       aria-close-label="Close message"
       >
         <span v-if="show == 1">
-        代码: {{stocknum}}
+        代码: {{stocknum_show}}
         <br>
         类型: {{typess[radio]}}
         <br>
@@ -69,6 +69,7 @@ export default {
       show:0,
       errmsg:"",
       isLoading:false,
+      stocknum_show:"",
     }
   },
   props:{
@@ -118,6 +119,7 @@ export default {
         this.isActive = true
         this.isLoading = false
         this.$emit('loadingchanged',this.isLoading)
+        this.stocknum_show = this.stocknum
         if (res.data.success == 1) {
           this.ttype = 'is-success'
           this.result = "Success"
